@@ -1,4 +1,4 @@
-FROM quay.io/suckowbiz/base
+FROM suckowbiz/base
 LABEL maintainer="Tobias Suckow <tobias@suckow.biz>"
 
 # A/V rendering requires group membership to access drm and load drivers.

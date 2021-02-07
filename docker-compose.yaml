@@ -1,0 +1,11 @@
+---
+version: '3'
+services:
+  base:
+    build: base
+    image: quay.io/suckowbiz/base
+  base-av:
+    build: av
+    image: quay.io/suckowbiz/base-av
+    depends_on:
+      - base

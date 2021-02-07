@@ -1,4 +1,4 @@
-![Ubuntu Linux](https://img.shields.io/badge/tested-ubuntu-green.svg) [![Docker Repository on Quay](https://quay.io/repository/suckowbiz/base-av/status "Docker Repository on Quay")](https://quay.io/repository/suckowbiz/base-av)
+![Ubuntu Linux](https://img.shields.io/badge/tested-ubuntu-green.svg) [![](https://images.microbadger.com/badges/image/suckowbiz/base-av.svg)](https://microbadger.com/images/suckowbiz/base-av "Get your own image badge on microbadger.com")
 
 # base-av
 
