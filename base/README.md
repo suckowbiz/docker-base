@@ -1,4 +1,4 @@
-![Ubuntu Linux](https://img.shields.io/badge/tested-ubuntu-green.svg) [![](https://images.microbadger.com/badges/version/suckowbiz/base.svg)](https://microbadger.com/images/suckowbiz/base "Get your own version badge on microbadger.com")
+![Ubuntu Linux](https://img.shields.io/badge/tested-ubuntu-green.svg) [![](https://images.microbadger.com/badges/image/suckowbiz/base.svg)](https://microbadger.com/images/suckowbiz/base "Get your own image badge on microbadger.com")
 
 # base
 
