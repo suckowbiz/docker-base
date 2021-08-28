@@ -7,7 +7,4 @@ jobs:
       image: gcr.io/kaniko-project/executor:debug
       volumes:
         - ${{GITHUB_WORKSPACE}}/.github/kaniko/config.json:/kaniko/.docker/config.json
-    steps:
-      - name: Run kaniko executor to build and push the Dockerimage
-        with:
-          entrypoint: /kaniko/executor --help
+      options: --entrypoint /kaniko/executor --help
