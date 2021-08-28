@@ -8,6 +8,6 @@ jobs:
       image: gcr.io/kaniko-project/executor:debug
       options: --entrypoint sh
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - run: ls -l /
       - run: ls -l /github/workspace
