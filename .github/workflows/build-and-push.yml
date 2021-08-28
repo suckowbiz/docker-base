@@ -10,6 +10,6 @@ jobs:
         - ${{ github.workspace }}:/workspace
       options: --entrypoint sh
     steps:
-      - run: echo "unkown" >> /etc/dummy-release
+      - run: mkdir /etc && echo "unkown" >> /etc/dummy-release
       - uses: actions/checkout@v2.3.4
       - run: ls -l /workspace
