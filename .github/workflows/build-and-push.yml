@@ -7,7 +7,6 @@ jobs:
     container:
       image: gcr.io/kaniko-project/executor:debug
       volumes:
-        - ${{ github.workspace }}/kaniko/docker:/kaniko/.docker
         - ${{ github.workspace }}:/workspace
       options: --entrypoint sh
     steps:
