@@ -9,7 +9,7 @@ on:
    - cron: '0 0 * * *'
 
 jobs:
-  base:
+  build-and-push:
     name: Push base Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
@@ -23,11 +23,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        run: ls -l "$GITHUB_WORKSPACE"
-      -
-        name: Build and push Docker image to publish it to Docker Hub
+        name: Build and push base image to publish it to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: "${{ github.workspace }}/base"
           push: true
           tags: suckowbiz/base:latest
+      -
+        name: Build and push base-av image to publish it to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+          context: "${{ github.workspace }}/base-av"
+          push: true
+          tags: suckowbiz/base-av:latest
