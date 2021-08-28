@@ -7,4 +7,6 @@ jobs:
       image: gcr.io/kaniko-project/executor:debug
       volumes:
         - ${{GITHUB_WORKSPACE}}/.github/kaniko/config.json:/kaniko/.docker/config.json
-      options: --entrypoint /kaniko/executor --help
+      options: --entrypoint sh
+    steps:
+      - run: /kaniko/executor --help
