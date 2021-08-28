@@ -33,6 +33,6 @@ jobs:
         name: Build and push base-av image to publish it to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: "${{ github.workspace }}/base-av"
+          context: "${{ github.workspace }}/av"
           push: true
           tags: suckowbiz/base-av:latest
