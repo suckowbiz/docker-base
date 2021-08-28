@@ -11,6 +11,7 @@ jobs:
         - ${{ github.workspace }}/base:/workspace
       options: --entrypoint sh
     steps:
+      - uses: actions/checkout@v2
       - run: ls -l /
       - run: ls -la /kaniko/.docker/
       - run: cat /kaniko/.docker/config.json
