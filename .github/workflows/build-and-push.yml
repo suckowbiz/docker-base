@@ -28,7 +28,7 @@ jobs:
         name: Build and push Docker image to publish it to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          file: "${{ GITHUB_WORKSPACE }}/base/Dockerfile"
-          context: "${{ GITHUB_WORKSPACE }}/base/context"
+          file: "${{ github.workspace }}/base/Dockerfile"
+          context: "${{ github.workspace }}/base/context"
           push: true
           tags: suckowbiz/base:latest
