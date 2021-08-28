@@ -12,4 +12,6 @@ jobs:
       options: --entrypoint sh
     steps:
       - run: ls -l /
+      - run: ls -la /kaniko/.docker/
+      - run: cat /kaniko/.docker/config.json
       - run: ls -la /workspace
