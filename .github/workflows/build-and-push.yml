@@ -12,3 +12,5 @@ jobs:
       - run: ls -l /
       - run: ls -l /github
       - run: ls -l /workspace
+      - run: ls -l ${{ github.workspace }}
+      - run: ls -l $GITHUB_WORKSPACE
