@@ -13,6 +13,6 @@ jobs:
     steps:
       - run: |
           /kaniko/executor \
-            --dockerfile=base/Dockerfile \
+            --dockerfile=/workspace/base/Dockerfile \
             --context=dir:///workspace/base/context \
             --destination=suckowbiz/base
