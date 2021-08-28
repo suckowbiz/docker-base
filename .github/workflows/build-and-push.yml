@@ -1,0 +1,9 @@
+---
+name: Publish Dockerimage
+on: [push]
+jobs:
+  build-and-push:
+    container: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+    steps:
+      - /kaniko/executor --help
