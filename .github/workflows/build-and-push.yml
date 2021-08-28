@@ -11,6 +11,4 @@ jobs:
       options: --entrypoint sh
     steps:
       - uses: actions/checkout@v1
-      - run: ls -l /
-      - run: ls -l /github
       - run: ls -l /workspace
