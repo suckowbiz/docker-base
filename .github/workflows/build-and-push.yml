@@ -7,7 +7,7 @@ jobs:
     container:
       image: gcr.io/kaniko-project/executor:debug
       volumes:
-        - ${{ github.workspace }}/.github/workflows/kaniko/config.json:/kaniko/.docker/config.json
+        - ${{ github.workspace }}/.github/workflows/kaniko/docker:/kaniko/.docker
         - ${{ github.workspace }}/base:/workspace
       options: --entrypoint sh
     steps:
