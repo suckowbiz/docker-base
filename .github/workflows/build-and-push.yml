@@ -3,7 +3,11 @@ name: Publish Dockerimage
 on: [push]
 jobs:
   build-and-push:
-    container: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
+    container:
+      image: gcr.io/kaniko-project/executor:debug
+      volumes:
+        - ${{GITHUB_WORKSPACE}}/.github/kaniko/config.json:/kaniko/.docker/config.json
     steps:
-      - /kaniko/executor --help
+      - name: Run kaniko executor to build and push the Dockerimage
+        with:
+          entrypoint: /kaniko/executor --help
