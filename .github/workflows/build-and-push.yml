@@ -6,10 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gcr.io/kaniko-project/executor:debug
-      volumes:
-        - ${{ github.workspace }}:/workspace
       options: --entrypoint sh
     steps:
-      - run: echo "ID=debian" > /etc/dummy-release
-      - uses: actions/checkout@v2
-      - run: ls -l /workspace
+      - run: ls -l /
