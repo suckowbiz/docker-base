@@ -11,8 +11,5 @@ jobs:
         - ${{ github.workspace }}:/workspace
       options: --entrypoint sh
     steps:
-      - run: |
-          /kaniko/executor \
-            --dockerfile=/workspace/base/Dockerfile \
-            --context=dir:///workspace/base/context \
-            --destination=suckowbiz/base
+      - run: ls -l /
+      - run: ls -la /workspace
