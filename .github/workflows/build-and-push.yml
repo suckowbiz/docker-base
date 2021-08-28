@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gcr.io/kaniko-project/executor:debug
+      volumes:
+        - ${{ github.workspace }}:/workspace
       options: --entrypoint sh
     steps:
       - uses: actions/checkout@v1
@@ -13,4 +15,3 @@ jobs:
       - run: ls -l /github
       - run: ls -l /workspace
       - run: ls -l ${{ github.workspace }}
-      - run: ls -l $GITHUB_WORKSPACE
