@@ -10,6 +10,6 @@ jobs:
         - ${{ github.workspace }}:/workspace
       options: --entrypoint sh
     steps:
-      - run: echo "ID=Debian" > /etc/dummy-release
+      - run: echo "ID=debian" > /etc/dummy-release
       - uses: actions/checkout@v2
       - run: ls -l /workspace
