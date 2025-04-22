@@ -1,5 +1,4 @@
 ---
-version: '3'
 services:
   base:
     build: base
@@ -8,4 +7,4 @@ services:
     build: av
     image: suckowbiz/base-av
     depends_on:
-      - base
+    - base

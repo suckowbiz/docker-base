@@ -2,18 +2,17 @@ FROM suckowbiz/base
 LABEL maintainer="Tobias Suckow <tobias@suckow.biz>"
 
 # A/V rendering requires group membership to access drm and load drivers.
-ENV ENTRYPOINT_GROUPS="audio,video"
+ENV GIVEN_USER_ADDITIONAL_GROUPS="audio,video"
 
-RUN apt-get install --quiet --quiet --no-install-recommends \
+RUN apt-get update && \
+    apt-get install --quiet --quiet --no-install-recommends \
     # Advanced Linux Sound Architecture
-    alsa-base \
+    alsa-utils \
     dbus-x11 \
-    # Intel i8xx, i9xx display driver
-    xserver-xorg-video-intel \
     # Light Themes (Ambiance and Radiance)
     light-themes \
     # Layout and rendering of internationalized text
-    libpango1.0 \
+    libpango-1.0-0 \
     # translates GTK+ widgets signals to event sounds. Both versions required.
     libcanberra-gtk-module \
     libcanberra-gtk3-module \
@@ -21,7 +20,7 @@ RUN apt-get install --quiet --quiet --no-install-recommends \
     libcanberra-gstreamer \
     # PulseAudio backend for libcanberra
     libcanberra-pulse \
-    libgtk2.0 \
+    #libgtk2.0-0t64 \
     vim \
     # desktop integration utilities from freedesktop.org
     xdg-utils \
