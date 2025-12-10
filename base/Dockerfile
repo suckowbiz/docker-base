@@ -16,7 +16,6 @@ RUN apt-get update && \
         software-properties-common \
         unzip \
         xz-utils \
-        gosu && \
-    rm -rf /var/lib/apt/lists/*
+        gosu
 
 COPY context /
